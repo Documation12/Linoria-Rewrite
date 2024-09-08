@@ -1,5 +1,5 @@
--- ms studios modded linoria
--- change one defualt color - 9/8/24
+-- Dripy modded libary (Based from Mstudio with inprovments)
+-- Added html support to labels, window title.
 local cloneref = cloneref or function(o) return o end
 local InputService: UserInputService = cloneref(game:GetService('UserInputService'));
 local TextService: TextService = cloneref(game:GetService('TextService'));
