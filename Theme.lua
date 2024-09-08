@@ -1,5 +1,5 @@
--- idk how this works (ms studio again)
--- removed webm shit (too much space) 9/8/24
+-- Dripy modded Theme (Based from Mstudio with inprovments)
+-- Removed webm
 local cloneref = cloneref or function(o) return o end
 local httpService = cloneref(game:GetService('HttpService'))
 local httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
@@ -7,7 +7,6 @@ local getassetfunc = getcustomasset or getsynasset
 local ThemeManager = {} do
 	ThemeManager.Folder = 'LinoriaLibSettings'
 	-- if not isfolder(ThemeManager.Folder) then makefolder(ThemeManager.Folder) end
-
 	ThemeManager.Library = nil
 	ThemeManager.BuiltInThemes = {
 		['Default'] 		= { 1, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1c1c1c","AccentColor":"0055ff","BackgroundColor":"141414","OutlineColor":"323232"}') },
