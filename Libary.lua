@@ -3309,7 +3309,7 @@ function Library:CreateWindow(...)
 		BorderColor3 = 'AccentColor';
 	});
 
-	local WindowLabel = Library:CreateLabel2({
+	local WindowLabel = Library:CreateLabel({
         Position = UDim2.new(0, 7, 0, 0);
         Size = UDim2.new(0, 0, 0, 25);
         RichText = true;
