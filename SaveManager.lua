@@ -1,4 +1,4 @@
--- custom save msg (mstudio)
+-- Dripy modded SaveManager (Based from Mstudio with inprovments)
 local cloneref = cloneref or function(o) return o end
 local httpService = cloneref(game:GetService('HttpService'))
 
