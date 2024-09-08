@@ -1572,6 +1572,7 @@ do
 			TextSize = 14;
 			Text = Text;
 			TextWrapped = DoesWrap or false,
+			RichText = true,
 			TextXAlignment = Enum.TextXAlignment.Left;
 			ZIndex = 5;
 			Parent = Container;
