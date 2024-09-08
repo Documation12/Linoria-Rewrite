@@ -1,5 +1,4 @@
 -- custom save msg (mstudio)
--- added ApplyToGroupbox 9/8/24
 local cloneref = cloneref or function(o) return o end
 local httpService = cloneref(game:GetService('HttpService'))
 
@@ -257,7 +256,7 @@ local SaveManager = {} do
 	function SaveManager:BuildConfigSection(tab)
 		assert(self.Library, 'Must set SaveManager.Library')
 
-		local section = tab:AddRightGroupbox('Configuration')
+		local section = tab:AddLeftGroupbox('Configuration')
 
 		section:AddInput('SaveManager_ConfigName',    { Text = 'Config name' })
 		section:AddButton('Create config', function()
@@ -344,11 +343,6 @@ local SaveManager = {} do
 		end
 
 		SaveManager:SetIgnoreIndexes({ 'SaveManager_ConfigList', 'SaveManager_ConfigName' })
-
-		function SaveManager:ApplyToGroupbox(groupbox)
-		        assert(self.Library, 'Must set SaveManager.Library first!')
-		        self:CreateThemeManager(groupbox)
-	        end
 	end
 
 	SaveManager:BuildFolderTree()
