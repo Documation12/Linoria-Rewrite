@@ -1,5 +1,5 @@
--- Dripy modded libary (Based from Mstudio with inprovments)
--- Added html support to labels, window title.
+-- ms studios modded linoria
+-- change one defualt color - 9/8/24
 local cloneref = cloneref or function(o) return o end
 local InputService: UserInputService = cloneref(game:GetService('UserInputService'));
 local TextService: TextService = cloneref(game:GetService('TextService'));
@@ -1649,7 +1649,7 @@ do
 			local Inner = Library:Create('Frame', {
 				BackgroundColor3 = Library.MainColor;
 				BorderColor3 = Library.OutlineColor;
-				BorderMode = Enum.BorderMode.Inset;
+			
 				Size = UDim2.new(1, 0, 1, 0);
 				ZIndex = 6;
 				Parent = Outer;
