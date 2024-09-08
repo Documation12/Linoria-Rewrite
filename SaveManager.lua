@@ -1,3 +1,5 @@
+-- custom save msg (mstudio)
+-- added ApplyToGroupbox 9/8/24
 local cloneref = cloneref or function(o) return o end
 local httpService = cloneref(game:GetService('HttpService'))
 
@@ -342,6 +344,11 @@ local SaveManager = {} do
 		end
 
 		SaveManager:SetIgnoreIndexes({ 'SaveManager_ConfigList', 'SaveManager_ConfigName' })
+
+		function ThemeManager:ApplyToGroupbox(groupbox)
+		        assert(self.Library, 'Must set SaveManager.Library first!')
+		        self:CreateThemeManager(groupbox)
+	        end
 	end
 
 	SaveManager:BuildFolderTree()
