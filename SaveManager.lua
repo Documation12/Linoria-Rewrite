@@ -345,7 +345,7 @@ local SaveManager = {} do
 
 		SaveManager:SetIgnoreIndexes({ 'SaveManager_ConfigList', 'SaveManager_ConfigName' })
 
-		function ThemeManager:ApplyToGroupbox(groupbox)
+		function SaveManager:ApplyToGroupbox(groupbox)
 		        assert(self.Library, 'Must set SaveManager.Library first!')
 		        self:CreateThemeManager(groupbox)
 	        end
