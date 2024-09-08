@@ -41,14 +41,14 @@ local Library = {
 	HudRegistry = {};
 
 	FontColor = Color3.fromRGB(191, 191, 191);
-    FontColor2 = Color3.fromRGB(198, 198, 198);
-    MainColor = Color3.fromRGB(15, 15, 15);
-    MainColor2 = Color3.fromRGB(23, 23, 23);
-    BackgroundColor = Color3.fromRGB(16, 16, 16);
-    AccentColor = Color3.fromRGB(208, 123, 255);
-    OutlineColor = Color3.fromRGB(11, 11, 11);
+        FontColor2 = Color3.fromRGB(198, 198, 198);
+        MainColor = Color3.fromRGB(15, 15, 15);
+        MainColor2 = Color3.fromRGB(23, 23, 23);
+        BackgroundColor = Color3.fromRGB(16, 16, 16);
+        AccentColor = Color3.fromRGB(208, 123, 255);
+        OutlineColor = Color3.fromRGB(11, 11, 11);
 
-    Black = Color3.new(0, 0, 0);
+        Black = Color3.new(0, 0, 0);
 	Font = Enum.Font.Code,
 
 	OpenedFrames = {};
