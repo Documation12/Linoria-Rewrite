@@ -1,4 +1,5 @@
 -- idk how this works (ms studio again)
+-- removed webm shit (too much space)
 local cloneref = cloneref or function(o) return o end
 local httpService = cloneref(game:GetService('HttpService'))
 local httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
@@ -18,45 +19,6 @@ local ThemeManager = {} do
 		['Ubuntu'] 			= { 7, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"3e3e3e","AccentColor":"e2581e","BackgroundColor":"323232","OutlineColor":"191919"}') },
 		['Quartz'] 			= { 8, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"232330","AccentColor":"426e87","BackgroundColor":"1d1b26","OutlineColor":"27232f"}') },
 	}
-
-	function ApplyBackgroundVideo(webmLink)
-		if writefile == nil then return end;if readfile == nil then return end;if isfile == nil then return end
-		if ThemeManager.Library == nil then return end
-		if ThemeManager.Library.InnerVideoBackground == nil then return end
-
-		if string.sub(tostring(webmLink), -5) == ".webm" then
-			local CurrentSaved = ""
-			if isfile(ThemeManager.Folder .. '/themes/currentVideoLink.txt') then
-				CurrentSaved = readfile(ThemeManager.Folder .. '/themes/currentVideoLink.txt')
-			end
-			local VideoData = nil;
-			if CurrentSaved == tostring(webmLink) then
-				VideoData = {
-					Success = true,
-					Body = nil
-				}
-			else
-				VideoData = httprequest({
-					Url = tostring(webmLink),
-					Method = 'GET'
-				})
-			end
-			
-			if (VideoData.Success) then
-				VideoData = VideoData.Body
-				if (isfile(ThemeManager.Folder .. '/themes/currentVideo.webm') == false and VideoData ~= nil) or VideoData ~= nil then
-					writefile(ThemeManager.Folder .. '/themes/currentVideo.webm', VideoData)
-					writefile(ThemeManager.Folder .. '/themes/currentVideoLink.txt', tostring(webmLink))
-				end
-				
-				local Video = getassetfunc(ThemeManager.Folder .. '/themes/currentVideo.webm')
-				ThemeManager.Library.InnerVideoBackground.Video = Video
-				ThemeManager.Library.InnerVideoBackground.Visible = true
-				ThemeManager.Library.InnerVideoBackground:Play()
-			end
-		end
-	end
-	
 	function ThemeManager:ApplyTheme(theme)
 		local customThemeData = self:GetCustomTheme(theme)
 		local data = customThemeData or self.BuiltInThemes[theme]
@@ -157,7 +119,6 @@ local ThemeManager = {} do
 		groupbox:AddLabel('Accent color'):AddColorPicker('AccentColor', { Default = self.Library.AccentColor });
 		groupbox:AddLabel('Outline color'):AddColorPicker('OutlineColor', { Default = self.Library.OutlineColor });
 		groupbox:AddLabel('Font color')	:AddColorPicker('FontColor', { Default = self.Library.FontColor });
-		groupbox:AddInput('VideoLink', { Text = '.webm Video Background (Link)', Default = self.Library.VideoLink });
 		
 		local ThemesArray = {}
 		for Name, Theme in next, self.BuiltInThemes do
