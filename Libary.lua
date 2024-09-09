@@ -447,14 +447,18 @@ function Library:OnHighlight(HighlightInstance, Instance, Properties, Properties
 	end
 
 	HighlightInstance.MouseEnter:Connect(function()
-		doHighlight()
-	end)
-	HighlightInstance.MouseMoved:Connect(function()
-		doHighlight()
-	end)
-	HighlightInstance.MouseLeave:Connect(function()
-		undoHighlight()
-	end)
+    print("Mouse Entered Button Area", HighlightInstance.AbsolutePosition, HighlightInstance.AbsoluteSize)
+    doHighlight()
+end)
+HighlightInstance.MouseMoved:Connect(function(x, y)
+    print("Mouse Moved:", x, y)
+    doHighlight()
+end)
+HighlightInstance.MouseLeave:Connect(function()
+    print("Mouse Left Button Area")
+    undoHighlight()
+end)
+
 end;
 
 function Library:MouseIsOverOpenedFrame(Input)
@@ -1641,7 +1645,7 @@ do
 		local function CreateBaseButton(Button)
 			local Outer = Library:Create('Frame', {
 				BackgroundColor3 = Color3.new(0, 0, 0);
-				BorderColor3 = Library.OutlineColor;
+				BorderColor3 = Color3.new(0, 0, 0);    
 				Size = UDim2.new(1, -4, 0, 20);
 				ZIndex = 5;
 			});
