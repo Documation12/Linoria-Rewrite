@@ -12,3 +12,5 @@
 - Wally: Cleaning up verbose code, extending library functionality.
 - Mstudio45: Extending library functionality and adding resizing to the menu.
 - Dripyked: Adding richtext gonna do more.
+## Interface Previews
+<img src="https://i.imgur.com/qs0Hqc6.png" />
