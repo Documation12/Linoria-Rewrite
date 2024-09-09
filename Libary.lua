@@ -1644,6 +1644,7 @@ do
 				BorderColor3 = Color3.new(0, 0, 0);
 				Size = UDim2.new(1, -4, 0, 20);
 				ZIndex = 5;
+				Parent = Container;
 			});
 
 			local Inner = Library:Create('Frame', {
