@@ -13,4 +13,4 @@
 - Mstudio45: Extending library functionality and adding resizing to the menu.
 - Dripyked: Adding richtext gonna do more.
 ## Dev log
-Added rich text to Window title and labels. 9/8/24
+- Added rich text to Window title and labels 9/8/24.
