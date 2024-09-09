@@ -1643,7 +1643,7 @@ do
 				BackgroundColor3 = Color3.new(0, 0, 0);
 				BorderColor3 = Color3.new(0, 0, 0);
 				Size = UDim2.new(1, -4, 0, 20);
-				ZIndex = 5;
+				ZIndex = 6;
 			});
 
 			local Inner = Library:Create('Frame', {
