@@ -1,5 +1,5 @@
--- ms studios modded linoria
--- change one defualt color - 9/8/24
+-- Dripy modded libary (Based from Mstudio with inprovments)
+-- Added html support to labels, window title.
 local cloneref = cloneref or function(o) return o end
 local InputService: UserInputService = cloneref(game:GetService('UserInputService'));
 local TextService: TextService = cloneref(game:GetService('TextService'));
@@ -1646,10 +1646,11 @@ do
 				ZIndex = 5;
 			});
 
+
 			local Inner = Library:Create('Frame', {
 				BackgroundColor3 = Library.MainColor;
 				BorderColor3 = Library.OutlineColor;
-			
+				BorderMode = Enum.BorderMode.Inset;
 				Size = UDim2.new(1, 0, 1, 0);
 				ZIndex = 6;
 				Parent = Outer;
@@ -1664,13 +1665,13 @@ do
 			});
 
 			Library:Create('UIGradient', {
-				Color = ColorSequence.new({
-					ColorSequenceKeypoint.new(0, Color3.new(1, 1, 1)),
-					ColorSequenceKeypoint.new(1, Color3.fromRGB(212, 212, 212))
-				});
-				Rotation = 90;
-				Parent = Inner;
-			});
+		             Color = ColorSequence.new({
+			     ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 255, 255)),
+			     ColorSequenceKeypoint.new(1, Color3.fromRGB(212, 212, 212))
+		            );
+		           Rotation = 0;  
+		           Parent = Inner;
+	                });
 
 			Library:AddToRegistry(Outer, {
 				BorderColor3 = 'Black';
