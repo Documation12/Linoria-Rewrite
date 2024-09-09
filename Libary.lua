@@ -1646,7 +1646,6 @@ do
 				ZIndex = 5;
 			});
 
-
 			local Inner = Library:Create('Frame', {
 				BackgroundColor3 = Library.MainColor;
 				BorderColor3 = Library.OutlineColor;
@@ -1665,13 +1664,13 @@ do
 			});
 
 			Library:Create('UIGradient', {
-		             Color = ColorSequence.new({
-			     ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 255, 255)),
-			     ColorSequenceKeypoint.new(1, Color3.fromRGB(212, 212, 212))
-		            );
-		           Rotation = 0;  
-		           Parent = Inner;
-	                });
+				Color = ColorSequence.new({
+					ColorSequenceKeypoint.new(0, Color3.new(1, 1, 1)),
+					ColorSequenceKeypoint.new(1, Color3.fromRGB(212, 212, 212))
+				});
+				Rotation = 90;
+				Parent = Inner;
+			});
 
 			Library:AddToRegistry(Outer, {
 				BorderColor3 = 'Black';
