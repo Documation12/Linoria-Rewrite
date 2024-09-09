@@ -1641,9 +1641,9 @@ do
 		local function CreateBaseButton(Button)
 			local Outer = Library:Create('Frame', {
 				BackgroundColor3 = Color3.new(0, 0, 0);
-				BorderColor3 = Color3.new(0, 0, 0);
+				BorderColor3 = Library.OutlineColor;
 				Size = UDim2.new(1, -4, 0, 20);
-				ZIndex = 6;
+				ZIndex = 5;
 			});
 
 			local Inner = Library:Create('Frame', {
