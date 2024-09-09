@@ -1,5 +1,4 @@
 # Linoria Libary Rewrite
-
 ###### Example Script & Addons: 
 * [Example](Example.lua)
 * [Documantion](Documantion.lua)
@@ -9,9 +8,6 @@
 - Tabs - Centered tabs, Group boxes and group tabs.
 - Every ui element you will ever need button, toggle, slider and color picker.
 - Interface automatically becomes scrollable whenever there are too many UI elements
-
-## Interface Preview
-<img src="https://i.imgur.com/qs0Hqc6.png" />
 
 ## Contributors
 - Inori: Main developer.
