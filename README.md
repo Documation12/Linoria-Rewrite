@@ -1,10 +1,8 @@
 # Linoria Libary Rewrite
 
-###### Example Script: 
+###### Example Script & Addons: 
 * [Example](Example.lua)
 * [Documantion](Documantion.lua)
-
-###### Interface Addons:
 * [Theme Manager](Theme.lua)&nbsp;&nbsp;|&nbsp;&nbsp;[Save Manager](SaveManager.lua) 
 
 ## Features
