@@ -3567,12 +3567,36 @@ function Library:CreateWindow(...)
 			TabButton.BackgroundColor3 = Library.BackgroundColor;
 			Library.RegistryMap[TabButton].Properties.BackgroundColor3 = 'BackgroundColor';
 			TabFrame.Visible = false;
-		end;
+		
 
+                local function UpdateTabButtonSizes()
+                local numTabs = #Window.Tabs
+                if numTabs == 0 then return end
+                local tabAreaSize = Vector2.new(TabArea.AbsoluteSize.X, TabArea.AbsoluteSize.Y - 1)
+                local tabAreaWidth = tabAreaSize.X
+                local tabAreaHeight = tabAreaSize.Y
+                local padding = 0 * (numTabs - 1)
+                local tabButtonWidth = (tabAreaWidth - padding) / numTabs
+               local tabButtonHeight = tabAreaHeight 
+    
+             for _, tab in ipairs(Window.Tabs) do
+                  tab.Button.Size = UDim2.new(0, tabButtonWidth, 0, tabButtonHeight)
+                 end
+             end
+		if Config.centertabs then
+		function Tab:SetLayoutOrder(Position)
+                        TabButton.LayoutOrder = Position;
+                        TabListLayout:ApplyLayout();
+                        UpdateTabButtonSizes()  
+                end;
+                table.insert(Window.Tabs, Tab)
+                UpdateTabButtonSizes()
+		else
 		function Tab:SetLayoutOrder(Position)
 			TabButton.LayoutOrder = Position;
 			TabListLayout:ApplyLayout();
 		end;
+		end
 
 		function Tab:GetSides()
 			return { ["Left"] = LeftSide, ["Right"] = RightSide };
