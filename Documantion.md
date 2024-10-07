@@ -41,7 +41,7 @@ local MyButton = Main:AddButton('Name', function()
 end)
 ```
 ```lua
-local MySubButton = Mybutton:AddButton('', function()
+local MySubButton = Mybutton:AddButton('NameSub', function()
     print('You clicked a Sub button!')
 end)
 ```
